@@ -1,0 +1,29 @@
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+}
+.links li {
+  list-style: none;
+  padding-right: 15px;
+  cursor: pointer;
+}
+.links li a{
+    font-weight: 900;
+}
+
+.links li:hover {
+  color: rgb(66, 66, 67);
+}
