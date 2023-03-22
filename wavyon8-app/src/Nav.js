@@ -9,8 +9,24 @@ import { faInstagram } from '@fortawesome/free-solid-svg-icons'
 //const instagramIcon = <FontAwesomeIcon icon={faInstagram} />
 
 function Nav() {
+    const [show, handleShow] = useState(false);
+
+  // scroll listener. 'when you scroll down, add border'
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) {
+        handleShow(true);
+      } else {
+        handleShow(false);
+      }
+    });
+    return () => {
+      window.removeEventListener("scroll", handleShow);
+    };
+  }, []);
+
   return (
-    <div className={`nav`}>
+    <div className={`nav ${show && "navColor"}`}>
       <img src={logo} width="80" alt="wavyon8 logo" />
       <ul className="links">
         <li>
