@@ -1,0 +1,26 @@
+
+.container {
+  text-align: center;
+  padding: 100px;
+
+}
+
+.links li a{
+    font-weight: 200;
+}
+
+.socialMediaIcons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialMediaIcons a{
+    padding: 15px;
+    font-size: 25px;
+}
+
+p{
+    color: rgb(145, 144, 144);
+    font-weight: 200;
+}

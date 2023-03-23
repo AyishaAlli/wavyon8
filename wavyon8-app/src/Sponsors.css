@@ -1,0 +1,21 @@
+/*Slider */
+.content{
+  padding: 0px 20px;
+  margin-top: 50px;
+  
+}
+  .slider {
+    overflow: inherit;
+    padding: 100px 0px;
+    border-top: 3px solid #353535;
+    border-bottom: 3px solid #353535;
+  }
+  
+
+  
+  .slick-slide.dragging img {
+    pointer-events: none;
+  }
+  
+
+ 
