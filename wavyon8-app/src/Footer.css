@@ -1,26 +1,33 @@
-
-.container {
+.footerContainer {
   text-align: center;
-  padding: 100px;
-
+  padding-top: 20px;
+}
+.cc {
+  background-color: #3d4149;
+  margin-top: 200px;
+  color: white;
+}
+.footerLinks {
+  display: flex;
+  justify-content: center;
+}
+.footerLinks li a {
+  font-weight: 200;
+  margin: 0px 20px;
 }
 
-.links li a{
-    font-weight: 200;
+.socialMediaIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.socialMediaIcons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.socialMediaIcons a {
+  padding: 15px;
+  font-size: 25px;
 }
 
-.socialMediaIcons a{
-    padding: 15px;
-    font-size: 25px;
-}
-
-p{
-    color: rgb(145, 144, 144);
-    font-weight: 200;
+p {
+  color: rgb(159, 156, 156);
+  font-weight: 200;
 }

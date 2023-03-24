@@ -10,9 +10,10 @@ const youtube = <FontAwesomeIcon icon={faYoutube} />;
 
 export const Footer = () => {
   return (
-    <div className="container">
+    <div className="cc">
+    <div className="footerContainer">
       <h2>WAVYON8.COM</h2>
-      <ul className="links">
+      <ul className="footerLinks">
         <li>
           <a>Home</a>
         </li>
@@ -33,9 +34,8 @@ export const Footer = () => {
         <a>{youtube}</a>
       </div>
       <br />
-      <br />
-      <br />
       <p>&copy;2022 Wavyon8 LTD</p>
+    </div>
     </div>
   );
 };

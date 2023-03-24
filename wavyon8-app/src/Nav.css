@@ -14,20 +14,20 @@
     color: white;
 }
 
-.links {
+.navLinks {
   display: flex;
   justify-content: space-between;
   justify-content: center;
 }
-.links li {
+.navLinks li {
   list-style: none;
   padding-right: 15px;
   cursor: pointer;
 }
-.links li a{
-    font-weight: 700;
+.navLinks li a{
+    font-weight: 600;
 }
 
-.links li:hover {
-  color: rgb(66, 66, 67);
+.navLinks li:hover {
+  color: rgb(172, 172, 172);
 }

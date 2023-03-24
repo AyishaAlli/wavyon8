@@ -32,7 +32,7 @@ function Nav() {
     <div className={`nav ${show && "navColor"}`}>
       <img src={logo} width="80" alt="wavyon8 logo" />
 
-        <ul className="links">
+        <ul className="navLinks">
           <li>
             <a>HOME</a>
           </li>
