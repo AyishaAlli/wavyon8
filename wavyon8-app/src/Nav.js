@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Nav.css";
 import logo from "./images/logo_one.png";
+import { NavLink } from 'react-router-dom'
 
 import ReactDOM from "react-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -32,23 +33,29 @@ function Nav() {
     <div className={`nav ${show && "navColor"}`}>
       <img src={logo} width="80" alt="wavyon8 logo" />
 
-        <ul className="navLinks">
+        {/* <ul className="navLinks">
           <li>
-            <a>HOME</a>
+          <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <a>ABOUT US</a>
+          <NavLink to="/about">About</NavLink>
           </li>
-          <li>
-            <a>EVENTS</a>
+
+          <li className="navLinkDropdown">
+          <NavLink to="/events">Events</NavLink>
           </li>
+          <div className="navLink-dd-content">
+            <NavLink to="/upcomingevents">Upcoming Events</NavLink>
+            <NavLink to="/lessons">Rollerskating Lessons</NavLink>
+            <NavLink to="/gallery">Gallery</NavLink>
+          </div>
           <li>
             <a>SHOP</a>
           </li>
           <li>
-            <a>GALLERY</a>
+          <NavLink to="/contact">Contact</NavLink>
           </li>
-        </ul>
+        </ul> */}
 
     </div>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from 'react-slick'
 
+
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import "./Sponsors.css";
@@ -30,7 +31,8 @@ function Sponsors() {
           }, {
             breakpoint: 520,
             settings: {
-              slidesToShow: 4
+              speed:5000,
+              slidesToShow: 3
             }
           }]
       }
