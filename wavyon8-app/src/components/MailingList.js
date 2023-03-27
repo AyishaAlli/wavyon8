@@ -1,5 +1,5 @@
 import React from "react";
-import './MailingList.css'
+import "./MailingList.css";
 
 function MailingList() {
   return (

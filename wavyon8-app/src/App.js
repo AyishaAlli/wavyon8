@@ -1,21 +1,25 @@
 import "./App.css";
-import Nav from "./Nav";
-import Carousell from "./Carousel";
-import Sponsors from "./Sponsors";
-import Footer from "./Footer";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Homepage from "./pages/Homepage";
 //import Main from "./Main";
-import Content from "./Content";
-import MailingList from "./MailingList";
 
 function App() {
   return (
     <div className="App">
-      <Nav />
-      <Carousell />
-      <Content />
-      <Sponsors />
-      <MailingList />
-      <Footer />
+      <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route exact path="/" exact element={<Homepage />} />
+          {/* <Route path='/about' element={<About/>} />
+        <Route path='/contact' element={<Contact/>} />
+        <Route path='/blogs' element={<Blogs/>} />
+        <Route path='/sign-up' element={<SignUp/>} /> */}
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }
