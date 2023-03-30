@@ -7,8 +7,7 @@ import ReactDOM from "react-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-
-const barsIcon = <FontAwesomeIcon icon={faBars} />
+const bars = <FontAwesomeIcon icon={faBars} />;
 
 function Nav() {
   const [show, handleShow] = useState(false);
@@ -71,7 +70,7 @@ function Nav() {
           </NavLink>
         </li>
       </div>
-      <div>BARS</div>
+      <div>{bars}</div>
     </div>
   );
 }

@@ -1,14 +1,27 @@
 import React from "react";
 import "./MailingList.css";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightDots } from "@fortawesome/free-solid-svg-icons";
+
+const arrow = <FontAwesomeIcon icon={faArrowUpRightDots} />;
 function MailingList() {
   return (
     <div className="mailingListContainer">
       <h1>Sign up to our Mailing list</h1>
-      <p>to stay you to date with all things Wavy</p>
-      <input type="email" name="email" id="email" />
-      <span></span>
-      <button type="submit">Submit</button>
+      <p>to stay up to date with all things Wavy</p>
+      <span className="mailingListInputContainer">
+        <input
+          className="mailingListInput"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="email"
+        />
+        <button type="submit" className="mailingListSubmitBtn">
+          SIGN UP{arrow}
+        </button>
+      </span>
     </div>
   );
 }
