@@ -8,8 +8,10 @@ const arrow = <FontAwesomeIcon icon={faArrowUpRightDots} />;
 function MailingList() {
   return (
     <div className="mailingListContainer">
-      <h1>Sign up to our Mailing list</h1>
+      <div className="mailingListText">
+      <h1 className="signUpText">Sign up to our Mailing list</h1>
       <p>to stay up to date with all things Wavy</p>
+      </div>
       <span className="mailingListInputContainer">
         <input
           className="mailingListInput"
