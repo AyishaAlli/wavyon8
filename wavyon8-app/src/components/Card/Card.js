@@ -43,10 +43,10 @@ function ArticleCard() {
       <div className="articleContainer">
         <h1 className="">Articles</h1>
         {articles.map((card, index) => (
-          <figure>
+          <figure className="articleFigure">
             <img src={card.imageSrc} width={450} height={200} alt={card.alt} />
 
-             <figcaption>
+             <figcaption className="articleFigureCaption">
               <h3 className="articleTitle">{card.title}</h3>
               <h4 className="authorName">By {card.author}</h4>
               <p>

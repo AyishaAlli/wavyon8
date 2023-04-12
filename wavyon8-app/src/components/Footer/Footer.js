@@ -38,7 +38,7 @@ export const Footer = () => {
           <a>{youtube}</a>
         </div>
         <br />
-        <p>&copy;2022 Wavyon8 LTD</p>
+        <p className="copyRightText">&copy;2022 Wavyon8 LTD</p>
       </div>
     </div>
   );

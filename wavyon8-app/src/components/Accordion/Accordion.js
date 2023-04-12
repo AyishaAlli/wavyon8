@@ -15,7 +15,7 @@ function Flush() {
   ];
   return (
     <div className="accordionContainer">
-      <Accordion defaultActiveKey="0" flush>
+      <Accordion  flush>
         <Accordion.Item eventKey="0">
           <Accordion.Header>Our History</Accordion.Header>
           <Accordion.Body>

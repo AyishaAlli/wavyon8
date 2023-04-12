@@ -1,0 +1,45 @@
+.teamTitle,
+.adminTeamTitle,
+.membersTeamTitle {
+  text-align: center;
+}
+.teamTitle {
+  padding-top: 200px;
+  padding-bottom: 50px;
+}
+.membersTeamTitle {
+  padding-top: 100px;
+}
+.teamPictures{
+  width: 700px;
+}
+.membersPictures{
+  width: 1200px;
+}
+.teamPictures, .membersPictures {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  margin: auto;
+}
+
+
+.teamPhoto {
+  border-radius: 50%;
+  margin: 10px;
+}
+.teamInfo {
+  text-align: center;
+}
+@media screen and (max-width: 1100px) {
+  .membersPictures {
+    width: 900px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .teamPictures, .membersPictures {
+    width: 210px;
+    margin: auto;
+  }
+}
