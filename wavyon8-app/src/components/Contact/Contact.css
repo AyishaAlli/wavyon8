@@ -1,5 +1,5 @@
 .contactContainer {
-  padding-top: 150px;
+  padding-top: 100px;
 }
 
 .contactUsTitle {
@@ -7,12 +7,12 @@
   padding-bottom: 50px;
 }
 
-.contactDetails{
-    margin-top: 50px;
+.contactDetails {
+  margin-top: 50px;
 }
 
 @media screen and (max-width: 600px) {
-    .contactContainer {
-        padding-top: 10px;
-      }
+  .contactContainer {
+    padding-top: 10px;
+  }
 }
