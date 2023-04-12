@@ -1,0 +1,15 @@
+.articleContainer{
+   margin: 10px;
+}
+figure{
+    display: flex;
+}
+
+figcaption{
+    margin-left: 15px;
+}
+
+.authorName{
+    font-style: italic;
+    font-size: 15px;
+}

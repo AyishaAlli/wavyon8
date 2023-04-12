@@ -1,15 +1,15 @@
 import React from "react";
 
-import Content from "../components/Content";
-import MailingList from "../components/MailingList";
-import Carousell from "../components/Carousel";
-import Sponsors from "../components/Sponsors";
+import MailingList from "../components/MailingList/MailingList";
+import Carousell from "../components/Carousel/Carousel";
+import Sponsors from "../components/Sponsors/Sponsors";
+import ArticleCard from "../components/Card/Card";
 
 function Homepage() {
   return (
     <div>
       <Carousell />
-      <Content />
+      <ArticleCard />
       <Sponsors />
       <MailingList />
     </div>

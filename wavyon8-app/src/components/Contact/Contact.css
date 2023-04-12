@@ -1,0 +1,18 @@
+.contactContainer {
+  padding-top: 150px;
+}
+
+.contactUsTitle {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.contactDetails{
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 600px) {
+    .contactContainer {
+        padding-top: 10px;
+      }
+}

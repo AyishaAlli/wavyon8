@@ -5,12 +5,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Sponsors.css";
 
-import ellesse from "../images/sponsors-logos/ellesse.png";
-import jbl from "../images/sponsors-logos/jbl.png";
-import lucozade from "../images/sponsors-logos/lucozade.png";
-import redBull from "../images/sponsors-logos/red-bull.png";
-import wray from "../images/sponsors-logos/wray-and-nephew.png";
-import zara from "../images/sponsors-logos/zara.png";
+import ellesse from "../../images/sponsors-logos/ellesse.png";
+import jbl from "../../images/sponsors-logos/jbl.png";
+import lucozade from "../../images/sponsors-logos/lucozade.png";
+import redBull from "../../images/sponsors-logos/red-bull.png";
+import wray from "../../images/sponsors-logos/wray-and-nephew.png";
+import zara from "../../images/sponsors-logos/zara.png";
 
 function Sponsors() {
   const sliderSettings = {

@@ -1,10 +1,12 @@
 import "./App.css";
-import Nav from "./components/Nav";
-import Footer from "./components/Footer";
+import Nav from "./components/Nav/Nav";
+import Footer from "./components/Footer/Footer";
+import Homepage from "./pages/Homepage";
+import ContactPage from "./pages/ContactPage"
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Homepage from "./pages/Homepage";
-//import Main from "./Main";
+
 
 function App() {
   return (
@@ -13,8 +15,8 @@ function App() {
         <Nav />
         <Routes>
           <Route exact path="/" exact element={<Homepage />} />
+          <Route path="/contact" element={<ContactPage />} />
           {/* <Route path='/about' element={<About/>} />
-        <Route path='/contact' element={<Contact/>} />
         <Route path='/blogs' element={<Blogs/>} />
         <Route path='/sign-up' element={<SignUp/>} /> */}
         </Routes>

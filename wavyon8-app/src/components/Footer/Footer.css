@@ -1,9 +1,11 @@
 .footerContainer {
   text-align: center;
   padding-top: 20px;
+ 
+ 
 }
 .cc {
-  background-color: #3d4149;
+  background-color: #7d909d;
   margin-top: 200px;
   color: white;
 }
@@ -28,6 +30,6 @@
 }
 
 p {
-  color: rgb(159, 156, 156);
+  color: rgb(206, 206, 206);
   font-weight: 200;
 }

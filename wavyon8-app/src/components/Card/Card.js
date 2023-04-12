@@ -1,20 +1,65 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import "./Card.css";
+
 import carnival from "../../images/homepage/carnival.png";
+import collage from "../../images/homepage/collage-skaters.jpeg";
+import skater from "../../images/homepage/skater.webp";
 
 function ArticleCard() {
+  const articles = [
+    {
+      imageSrc: carnival,
+      alt: "article logo",
+      title:
+        "South London roller skaters enjoy festival spirit despite cancelled carnival",
+      author: "Gabriela Jimenez - In your Area",
+      exert:
+        "Their carnival may have been cancelled this year, and the rainy weather and cloudy skies failed to impress, but this did not stop roller skaters last week in London from going out in striking carnival outfits and carrying flags that represent their origins...",
+      link: "https://www.inyourarea.co.uk/news/south-london-roller-skaters-enjoy-festival-spirit-despite-cancelled-carnival/",
+    },
+    // {
+    //   imageSrc: collage,
+    //   alt: "article logo",
+    //   title: "South London roller skaters seek new home",
+    //   author: "Andrew Cleminson - In your Area",
+    //   exert:
+    //     "It’s a bright sunny Saturday, crowds have descended on Clapham Common, music is playing and everyone’s having fun. With restrictions easing, surely, there’s nothing unusual to see? In fact, there is, because @Wavyon8 have...",
+    //   link: "https://www.inyourarea.co.uk/news/south-london-roller-skaters-seek-new-home/",
+    // },
+    {
+      imageSrc: skater,
+      alt: "article logo",
+      title: "The London Rollerskating Scene",
+      author: "Alice Zoo - Vogue Italia",
+      exert:
+        "Walking in the parks in London during the long months of the pandemic summer, every so often the anxious tension in the air would be cut through by the sudden rush of a group of roller skaters, zipping back and forth along the Serpentine at speed...",
+      link: "https://www.vogue.it/fotografia/article/skaters-by-alice-zoo",
+    },
+  ];
+
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={carnival} />
-      <Card.Body>
-        <Card.Title>In Your Area - Gabriela Jimenez </Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">See More</Button>
-      </Card.Body>
-    </Card>
+    <>
+      <div className="articleContainer">
+        <h1 className="">Articles</h1>
+        {articles.map((card, index) => (
+          <figure>
+            <img src={card.imageSrc} width={450} height={200} alt={card.alt} />
+
+             <figcaption>
+              <h3 className="articleTitle">{card.title}</h3>
+              <h4 className="authorName">By {card.author}</h4>
+              <p>
+                {card.exert}
+              </p>
+              <a className="articleButton" href={card.link} target={"_blank"}>
+                Read More
+              </a>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </>
   );
 }
 
