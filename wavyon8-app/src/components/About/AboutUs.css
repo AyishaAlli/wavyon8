@@ -10,13 +10,14 @@
 .membersTeamTitle {
   padding-top: 100px;
 }
-.teamPictures{
+.teamPictures {
   width: 700px;
 }
-.membersPictures{
-  width: 1200px;
+.membersPictures {
+  width: 1000px;
 }
-.teamPictures, .membersPictures {
+.teamPictures,
+.membersPictures {
   display: flex;
   flex-wrap: wrap;
 
@@ -24,22 +25,31 @@
   margin: auto;
 }
 
-
-.teamPhoto {
+.teamPhoto, .memberTeamPhoto {
   border-radius: 50%;
   margin: 10px;
 }
 .teamInfo {
   text-align: center;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1000px) {
+  .teamPictures {
+    width: 700px;
+  }
   .membersPictures {
-    width: 900px;
+    width: 700px;
   }
 }
-@media screen and (max-width: 600px) {
-  .teamPictures, .membersPictures {
-    width: 210px;
+@media screen and (max-width: 700px) {
+  .teamPictures {
+    width: 600px;
     margin: auto;
+  }
+  .membersPictures {
+    width: 550px;
+  }
+  .memberTeamPhoto {
+    width: 150px;
+    height: 150px;
   }
 }

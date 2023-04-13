@@ -71,7 +71,7 @@ function AboutUs() {
         {team.map((card, i) => (
           <figure>
             <img
-              className="teamPhoto"
+              className="memberTeamPhoto"
               src={card.imgScr}
               width={200}
               height={200}

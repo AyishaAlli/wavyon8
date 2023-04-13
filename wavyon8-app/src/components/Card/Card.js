@@ -1,5 +1,3 @@
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
 import "./Card.css";
 
 import carnival from "../../images/homepage/carnival.png";
