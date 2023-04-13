@@ -1,9 +1,10 @@
-import React from "react";
-import { Row, Col } from "react-bootstrap";
-import { productsArray } from "../../products";
+import React from 'react'
+import {Row, Col} from 'react-bootstrap'
+import { productsArray } from '../../products'
+import ProductsCard from './ProductsCard'
+import FeaturedProduct from './FeaturedProduct'
 
-import ProductCard from './ProductCard'
-import "./Shop.css";
+import './Shop.css'
 
 function Shop() {
   return (
@@ -12,12 +13,13 @@ function Shop() {
       <Row xs={1} md={3} className="g-4">
         {productsArray.map((product, id) => (
           <Col align="center" key={id}>
-            <ProductCard product={product}/>
+            <ProductsCard product={product}/>
           </Col>
         ))}
       </Row>
+      <FeaturedProduct/>
     </div>
-  );
+  )
 }
 
-export default Shop;
+export default Shop

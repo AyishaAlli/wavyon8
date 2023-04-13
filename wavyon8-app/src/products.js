@@ -18,7 +18,7 @@ const productsArray = [
   },
 
   {
-    id: "1",
+    id: "2",
     title: "Black Wavy Tee",
     photo: "",
     description: "",
@@ -36,7 +36,7 @@ const productsArray = [
   },
 
   {
-    id: "2",
+    id: "3",
     title: "Wavy Hoodie",
     photo: "",
     description: "",
