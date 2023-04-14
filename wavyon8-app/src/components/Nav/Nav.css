@@ -1,6 +1,7 @@
 :root {
-  --grey: #7d909d;
+  /* --grey: #7d909d; */
   --white: #ffffff;
+  --grey: black;
 }
 
 .nav {
@@ -13,6 +14,8 @@
   z-index: 10;
   transition-timing-function: ease-in;
   transition: all 0.5s;
+  color: var(--white);
+  background-color: var(--grey);
 }
 
 .navLinks ul {
@@ -27,7 +30,7 @@
   font-weight: 600;
   text-decoration: none;
   list-style: none;
-  color: black;
+  color: var(--white);
 }
 
 .navLink:not(:last-child) {
@@ -70,6 +73,7 @@
   background-color: transparent;
   align-self: center;
   padding-bottom: 15px;
+  color: #ffffff;
 }
 .navAndShoppingCart {
   display: flex;

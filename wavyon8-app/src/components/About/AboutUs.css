@@ -53,3 +53,20 @@
     height: 150px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .teamPictures {
+    width: 250px;
+  
+    margin: auto;
+  }
+  .membersPictures {
+    width: 300px;
+  }
+  .memberTeamPhoto {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+

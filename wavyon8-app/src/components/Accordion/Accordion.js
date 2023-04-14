@@ -7,12 +7,6 @@ import millz from "../../images/team/millz.jpg";
 import alicia from "../../images/team/alicia.jpg";
 
 function Flush() {
-  const images = [
-    { imgScr: ayisha, name: "Ayisha Alli", handle: "@ayyskates" },
-    { imgScr: shanice, name: "Shanice Sheppherd", handle: "@shanice" },
-    { imgScr: millz, name: "Emile St Hilaire", handle: "@mr_st_hilaire" },
-    { imgScr: alicia, name: "Alicia Miller", handle: "@alixworld" },
-  ];
   return (
     <div className="accordionContainer">
       <Accordion  flush>

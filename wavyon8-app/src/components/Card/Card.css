@@ -1,15 +1,42 @@
+.articleMainTitle{
+  text-align: center;
+  margin-top: 100px;
+}
 .articleContainer {
-  margin: 10px;
+  margin-top: 100px;
+  max-width: 80%;
+  margin: auto;
 }
 .articleFigure {
   display: flex;
+  justify-content: center;
 }
 
 .articleFigureCaption {
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 .authorName {
   font-style: italic;
   font-size: 15px;
 }
+
+@media screen and (max-width: 600px) {
+
+
+
+  .articleFigure {
+    flex-direction: column;
+    
+  }
+
+  .articleImage{
+    width: 250px;
+    height: 250px;
+    align-self: center;
+  }
+  .articleFigureCaption {
+    text-align: center;
+    padding: 20px;
+  }
+} 

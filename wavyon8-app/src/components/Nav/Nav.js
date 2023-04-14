@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Nav.css";
-import logo from "../../images/logo_one.png";
+import logo from "../../images/logo_two.png";
 import { NavLink } from "react-router-dom";
 
 
@@ -26,20 +26,20 @@ function Nav() {
     setShowNavbar(!showNavbar);
   };
 
-  // scroll listener. 'when you scroll down, add border'
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 10) {
-        handleShowColor(true);
-      } else {
-        handleShowColor(false);
-      }
-    });
+  // scroll listener. 'when you scroll down, adds colour to navbar'
+  // useEffect(() => {
+  //   window.addEventListener("scroll", () => {
+  //     if (window.scrollY > 10) {
+  //       handleShowColor(true);
+  //     } else {
+  //       handleShowColor(false);
+  //     }
+  //   });
 
-    return () => {
-      window.removeEventListener("scroll", handleShowColor);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleShowColor);
+  //   };
+  // }, []);
 
   return (
     <>
