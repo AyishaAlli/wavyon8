@@ -5,7 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightDots } from "@fortawesome/free-solid-svg-icons";
 
 const arrow = <FontAwesomeIcon icon={faArrowUpRightDots} />;
+
 function MailingList() {
+  
   return (
     <div className="mailingListContainer">
       <div className="mailingListText">
