@@ -11,11 +11,10 @@ function ProductsCard(props) {
   return (
     <Card>
       <Card.Body>
+        <Card.Img src={product.photo} alt={product.title}/>
         <Card.Title>{product.title}</Card.Title>
         <Card.Text>£{product.price}</Card.Text>
-        <Button variant="primary">
-          More Info
-        </Button>
+        <Button variant="primary">More Info</Button>
         <Button variant="primary" onClick={() => cart.addOneToCart(product.id)}>
           Add To Cart
         </Button>

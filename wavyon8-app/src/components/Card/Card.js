@@ -16,6 +16,16 @@ function ArticleCard() {
         "Their carnival may have been cancelled this year, and the rainy weather and cloudy skies failed to impress, but this did not stop roller skaters last week in London from going out in striking carnival outfits and carrying flags that represent their origins...",
       link: "https://www.inyourarea.co.uk/news/south-london-roller-skaters-enjoy-festival-spirit-despite-cancelled-carnival/",
     },
+    {
+      imageSrc: carnival,
+      alt: "article logo",
+      title:
+        "Skating is booming!",
+      author: "Andrew Cleminson - ASBO Magazine",
+      exert:
+        "Did you every roller-skate when you were a kid? If you did, you may like to give it another go by joining one of the fastest growing skate groups – @wavyon8 – They deliver UK flavoured roller-skating events...",
+      link: "https://www.asbomagazine.com/2022/01/31/skatings-booming/",
+    },
     // {
     //   imageSrc: collage,
     //   alt: "article logo",

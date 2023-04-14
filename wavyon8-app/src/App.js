@@ -7,6 +7,7 @@ import AboutUsPage from "./pages/AboutUsPage";
 import ShoppingPage from "./pages/ShoppingPage";
 import CartProvider from "./CartContext";
 import ScrollToTop from "./components/ScrollToTop";
+import PreLoader from "./components/PreLoader/PreLoader";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -14,8 +15,10 @@ function App() {
   return (
     <CartProvider>
       <div className="App">
+        <PreLoader />
         <BrowserRouter>
           <ScrollToTop />
+
           <Nav />
           <Routes>
             <Route exact path="/" exact element={<Homepage />} />

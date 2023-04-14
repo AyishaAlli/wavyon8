@@ -1,3 +1,4 @@
+import backJumper from "../src/images/shop/blackjumper.jpg";
 const productsArray = [
   {
     id: "1",
@@ -38,7 +39,7 @@ const productsArray = [
   {
     id: "3",
     title: "Wavy Hoodie",
-    photo: "",
+    photo: backJumper,
     description: "",
     colour: "Blue",
     size: "small",
