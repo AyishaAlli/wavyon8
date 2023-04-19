@@ -41,3 +41,8 @@ React
 ### Prerequisites
 
 ### Installation
+
+##### My Notes
+
+npm run build
+firebase deploy
