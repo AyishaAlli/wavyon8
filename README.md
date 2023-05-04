@@ -28,21 +28,26 @@
 
 ## About The Project
 
-WAVYON8 Info website. Who they are, what they do and what they have coming up
+WAVYON8 Info website
 
 ### Built With
 
-React
+React, MongoDB, NodeJS, React-Bootstrap, CSS
 
 <!-- GETTING STARTED -->
 
 ## Getting Started
+'''
+cd wavyon8-app
+npm run start
+'''
 
 ### Prerequisites
 
 ### Installation
 
 ##### My Notes
+.
 
 npm run build
 firebase deploy
