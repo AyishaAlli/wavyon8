@@ -1,22 +1,63 @@
 const express = require("express");
-const cors = require("cors");
+const bodyParser = require("body-parser");
+const dbConnect = require("./db/dbConnect");
+const Email = require("./models/emailModel");
+
 const app = express();
+const port = 8000;
+dbConnect();
 
-app.use(cors());
-app.use(express.json());
+// allows frontend users to access endpoints with no errors
+// #### DO MORE RESEARCH ON THIS ####
 
-app.get("/message", (req, res) => {
-  res.json({ message: "Hello from server!" });
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content, Accept, Content-Type, Authorization"
+  );
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, DELETE, PATCH, OPTIONS"
+  );
+  next();
 });
 
-app.listen(8080, () => {
-  console.log(`Server is running on port 8080.`);
+// parse requests of content-type - application/json
+app.use(bodyParser.json());
+
+// parse requests of content-type - application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// simple route
+app.get("/", (req, res, next) => {
+  res.json({ message: "Welcome to this application." });
+  next();
 });
 
-app.post('/submit-email', (req, res) => {
-    const email = req.body.email;
-  
-    // Process email data here
-  
-    res.send('Email submitted');
+app.listen(port, () => {
+  console.log(`app listening on port ${port}`);
+});
+
+app.post("/submit-email", (request, response) => {
+  const email = new Email({
+    email: request.body.email,
   });
+  email
+    .save()
+    .then((result) => {
+      response.status(201).send({
+        message: "Email Created Successfully",
+        result,
+      });
+    })
+    // catch error if the new email wasn't added successfully to the database
+    .catch((error) => {
+      response.status(500).send({
+        message: "Error creating email",
+        error,
+      });
+    });
+});
+
+module.exports = app;
