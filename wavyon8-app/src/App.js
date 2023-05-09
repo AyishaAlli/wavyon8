@@ -8,7 +8,7 @@ import ShoppingPage from "./pages/ShoppingPage";
 import CartProvider from "./CartContext";
 import ScrollToTop from "./components/ScrollToTop";
 import PreLoader from "./components/PreLoader/PreLoader";
-
+import Events from "./pages/EventsPage"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -25,6 +25,7 @@ function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/about" element={<AboutUsPage />} />
             <Route path="/shop" element={<ShoppingPage />} />
+            <Route path="/events" element={<Events />} />
             {/*
         <Route path='/blogs' element={<Blogs/>} />
         <Route path='/sign-up' element={<SignUp/>} /> */}
