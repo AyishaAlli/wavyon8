@@ -3,7 +3,6 @@ import "./Nav.css";
 import logo from "../../images/logo_two.png";
 import { NavLink } from "react-router-dom";
 
-
 import { Modal } from "react-bootstrap";
 
 import ReactDOM from "react-dom";
@@ -44,7 +43,9 @@ function Nav() {
   return (
     <>
       <div className={`nav ${showColor && "navColor"}`}>
-        <img src={logo} width="80" alt="wavyon8 logo" />
+        <NavLink to="/">
+          <img src={logo} width="80" alt="wavyon8 logo" />
+        </NavLink>
         <div className="navAndShoppingCart">
           <div className="hamburger" onClick={handleShowNavbar}>
             {bars}
