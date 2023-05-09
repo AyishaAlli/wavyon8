@@ -7,15 +7,24 @@ import AboutUsPage from "./pages/AboutUsPage";
 import ShoppingPage from "./pages/ShoppingPage";
 import CartProvider from "./CartContext";
 import ScrollToTop from "./components/ScrollToTop";
-import PreLoader from "./components/PreLoader/PreLoader";
-import Events from "./pages/EventsPage"
+
+import Events from "./pages/EventsPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  const spinner = document.getElementById("spinner");
+
+  if (spinner) {
+    setTimeout(() => {
+      spinner.style.display = "none";
+      setLoading(false);
+    }, 2000);
+  }
   return (
     <CartProvider>
       <div className="App">
-        <PreLoader />
         <BrowserRouter>
           <ScrollToTop />
 
