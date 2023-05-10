@@ -18,7 +18,7 @@ const products = [
     ],
     size: "small",
     price: 25,
-    quantity: 3,
+    quantity: 2,
   },
 
   {

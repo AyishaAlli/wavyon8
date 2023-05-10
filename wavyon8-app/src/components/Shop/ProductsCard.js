@@ -4,16 +4,16 @@ import { CartContext } from "../../context/CartContext";
 import ProductContext from "../../context/ProductContext";
 import { useContext } from "react";
 
-function ProductsCard(props) {
+function ProductsCard({ product }) {
   const cart = useContext(CartContext);
-  const product = useContext(ProductContext);
+  const products = useContext(ProductContext);
 
   //const productQuantity = cart.getProductQuantity(product.id);
   console.log(cart.items);
   return (
     <Card>
       <Card.Body>
-        <Card.Img src={product[0].photo} alt={product.title} />
+        <Card.Img src={product.photo} alt={product.title} width={100} height={250}/>
         <Card.Title>{product.title}</Card.Title>
         <Card.Text>£{product.price}</Card.Text>
       </Card.Body>
