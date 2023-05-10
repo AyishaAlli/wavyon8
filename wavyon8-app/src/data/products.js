@@ -1,9 +1,12 @@
-import backJumper from "../src/images/shop/blackjumper.jpg";
-const productsArray = [
+import blackJumper from "../images/shop/blackjumper.jpg";
+import white_purple_tee from "../images/shop/white_purple_tee.png";
+import black_purple_tee from "../images/shop/black_purple_tee.png";
+
+const products = [
   {
     id: "1",
     title: "White Wavy Tee",
-    photo: "",
+    photo: white_purple_tee,
     description: "",
     basecolour: "White",
     colour: [
@@ -21,7 +24,7 @@ const productsArray = [
   {
     id: "2",
     title: "Black Wavy Tee",
-    photo: "",
+    photo: black_purple_tee,
     description: "",
     basecolour: "Black",
     colour: [
@@ -39,7 +42,7 @@ const productsArray = [
   {
     id: "3",
     title: "Wavy Hoodie",
-    photo: backJumper,
+    photo: blackJumper,
     description: "",
     colour: "Blue",
     size: "small",
@@ -49,7 +52,7 @@ const productsArray = [
 ];
 
 function getProductData(id) {
-  let productsData = productsArray.find((product) => product.id === id);
+  let productsData = products.find((product) => product.id === id);
 
   if (productsData == undefined) {
     console.log("Product ID not found" + id);
@@ -59,4 +62,4 @@ function getProductData(id) {
   return productsData;
 }
 
-export { productsArray, getProductData };
+export default products;

@@ -1,5 +1,6 @@
-import { createContext, useState } from "react";
-import { productsArray, getProductData } from "./products";
+import { createContext, useState, useContext } from "react";
+import { products, getProductData } from "../data/products";
+import ProductContext from "./ProductContext";
 
 export const CartContext = createContext({
   items: [],
@@ -12,10 +13,12 @@ export const CartContext = createContext({
 });
 
 export function CartProvider({ children }) {
+
+  const getProductData = useContext(ProductContext);
   const [cartProducts, setCartProducts] = useState([]);
 
   function getProductQuantity(id) {
-    const quantity = cartProducts.find(product => product.id === id)
+    const quantity = cartProducts.find((product) => product.id === id);
 
     if (quantity === undefined) {
       return 0;
@@ -33,7 +36,7 @@ export function CartProvider({ children }) {
       setCartProducts(
         cartProducts.map((product) =>
           product.id === id
-            ? { ...product, quantity: product.quantity+1 }
+            ? { ...product, quantity: product.quantity + 1 }
             : product
         )
       );
@@ -49,7 +52,7 @@ export function CartProvider({ children }) {
       setCartProducts(
         cartProducts.map((product) =>
           product.id === id
-            ? { ...product, quantity: product.quantity-1 }
+            ? { ...product, quantity: product.quantity - 1 }
             : product
         )
       );
