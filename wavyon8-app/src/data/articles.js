@@ -1,7 +1,7 @@
 
-import carnival from "../images/homepage/carnival.png";
-import collage from "../images/homepage/collage-skaters.jpeg";
-import skater from "../images/homepage/skater.webp";
+import carnival from "../assets/images/homepage/carnival.png";
+import collage from "../assets/images/homepage/collage-skaters.jpeg";
+import skater from "../assets/images/homepage/skater.webp";
 
 const articles = [
   {

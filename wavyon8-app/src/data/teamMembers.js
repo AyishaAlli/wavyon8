@@ -1,8 +1,8 @@
-import shakeel from "../images/team/shakeel.png";
-import ayisha from "../images/team/ayisha.jpg";
-import shanice from "../images/team/shanice.jpg";
-import millz from "../images/team/millz.jpg";
-import alicia from "../images/team/alicia.jpg";
+import shakeel from "../assets/images/team/shakeel.png";
+import ayisha from "../assets/images/team/ayisha.jpg";
+import shanice from "../assets/images/team/shanice.jpg";
+import millz from "../assets/images/team/millz.jpg";
+import alicia from "../assets/images/team/alicia.jpg";
 
 
   const teamMembers = [

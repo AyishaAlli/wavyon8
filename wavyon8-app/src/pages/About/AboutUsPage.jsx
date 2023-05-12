@@ -1,6 +1,6 @@
 import React from "react";
-import Flush from "../components/Accordion/Accordion";
-import AboutUs from "../components/About/AboutUs";
+import Flush from "../../components/Accordion/Accordion";
+import AboutUs from "../../components/About/AboutUs";
 
 function AboutUsPage() {
   return (

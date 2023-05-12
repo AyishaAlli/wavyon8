@@ -1,5 +1,5 @@
 import React from "react";
-import ProductCard from "../components/Shop/FeaturedProduct";
+import ProductCard from "../../components/Shop/FeaturedProduct";
 
 
 const FeatureProductPage = () => {

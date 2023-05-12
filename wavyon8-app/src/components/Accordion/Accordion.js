@@ -1,10 +1,6 @@
 import Accordion from "react-bootstrap/Accordion";
 import "./Accordion.css";
-import shakeel from "../../images/team/shakeel.png";
-import ayisha from "../../images/team/ayisha.jpg";
-import shanice from "../../images/team/shanice.jpg";
-import millz from "../../images/team/millz.jpg";
-import alicia from "../../images/team/alicia.jpg";
+
 
 function Flush() {
   return (

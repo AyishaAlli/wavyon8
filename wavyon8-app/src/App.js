@@ -1,17 +1,20 @@
 import "./App.css";
+
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
-import Homepage from "./pages/Homepage";
-import ContactPage from "./pages/ContactPage";
-import AboutUsPage from "./pages/AboutUsPage";
-import ShoppingPage from "./pages/ShoppingPage";
+import Homepage from "./pages/Homepage/Homepage";
+
+import ContactPage from "./pages/Contact/ContactPage";
+import AboutUsPage from "./pages/About/AboutUsPage";
+import ShoppingPage from "./pages/Shop/ShoppingPage";
+
 import CartProvider from "./context/CartContext";
 import ScrollToTop from "./components/ScrollToTop";
 
-import Events from "./pages/EventsPage";
+import Events from "./pages/Events/EventsPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
-import FeaturedProduct from "./pages/featuredProductPage";
+import FeaturedProduct from "./pages/Shop/featuredProductPage";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -28,7 +31,6 @@ function App() {
       <div className="App">
         <BrowserRouter>
           <ScrollToTop />
-
           <Nav />
           <Routes>
             <Route exact path="/" exact element={<Homepage />} />

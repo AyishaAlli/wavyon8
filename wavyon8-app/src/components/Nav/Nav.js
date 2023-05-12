@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Nav.css";
-import logo from "../../images/logo_two.png";
+import logo from "../../assets/images/logo_two.png";
 import { NavLink } from "react-router-dom";
 
 import { Modal } from "react-bootstrap";

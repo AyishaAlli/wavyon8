@@ -1,6 +1,6 @@
-import blackJumper from "../images/shop/blackjumper.jpg";
-import white_purple_tee from "../images/shop/white_purple_tee.png";
-import black_purple_tee from "../images/shop/black_purple_tee.png";
+import blackJumper from "../assets/images/shop/blackjumper.jpg";
+import white_purple_tee from "../assets/images/shop/white_purple_tee.png";
+import black_purple_tee from "../assets/images/shop/black_purple_tee.png";
 
 const products = [
   {
