@@ -7,12 +7,17 @@ import products from './data/products'
 import ProductContext from './context/ProductContext';
 
 
+import "bulma/css/bulma.css";
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+
     <ProductContext.Provider value={products}>
       <App />
     </ProductContext.Provider>
+
     
   </React.StrictMode>
 );
