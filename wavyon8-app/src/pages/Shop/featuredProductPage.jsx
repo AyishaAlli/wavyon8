@@ -1,26 +1,14 @@
 import React from "react";
 import ProductCard from "../../components/Shop/FeaturedProduct";
+import FeaturedProduct from "../../components/Shop/FeaturedProduct";
 
-
-const FeatureProductPage = () => {
-  const product = {
-    id: 1,
-    name: 'Example Product',
-    description: 'This is an example product',
-    price: 19.99,
-    imageUrl: 'https://example.com/product-image.jpg',
-    // ... other product details
-  };
-
+const FeaturedProductPage = () => {
   return (
     <div>
-      <h1>{product.name}</h1>
-      <img src={product.imageUrl} alt={product.name} />
-      <p>{product.description}</p>
-      <p>Price: ${product.price}</p>
-      <button>Add to Cart</button>
+      <h1>FEATURED PRODUCT</h1>
+      <FeaturedProduct />
     </div>
   );
 };
 
-export default FeatureProductPage;
+export default FeaturedProductPage;
