@@ -8,7 +8,7 @@ import './ShoppingPage.css'
 function ShoppingPage() {
   return (
     <div className="shoppingContainer">
-      <h1 className="shopTitle">ITEMS</h1>
+      <h1 className="shopTitle title">ITEMS</h1>
 
       <Row xs={1} md={3} className="g-4">
         {products.map((product, id) => (

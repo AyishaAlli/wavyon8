@@ -1,5 +1,6 @@
 import React from "react";
 
+import './ProductsCard.css'
 import FeaturedProduct from "./FeaturedProduct";
 
 import { Card, Button, Form, Row, Col } from "react-bootstrap";
@@ -13,13 +14,14 @@ function ProductsCard({ product }) {
 
   return (
     <Link to={`/shop/${product.id}`}>
-    <Card>
-      <Card.Body key={product.id} >
-        <Card.Img src={product.photo} alt={product.title} width={100} height={250}/>
-        <Card.Title>{product.title}</Card.Title>
-        <Card.Text>£{product.price}</Card.Text>
+     <div style={{maxWidth:'500px'}}>
+    <Card >
+      <Card.Body className="card-body" key={product.id} >
+        <Card.Img className="card-image" src={product.photo} alt={product.title} width={50} style={{height:'250px'}}/>
+        <Card.Title className="card-title">{product.title}</Card.Title>
+        <Card.Text className="card-text" >£{product.price}</Card.Text>
       </Card.Body>
-    </Card>
+    </Card></div> 
     </Link>
   );
 }

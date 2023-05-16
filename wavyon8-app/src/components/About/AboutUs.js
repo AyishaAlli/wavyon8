@@ -1,11 +1,10 @@
 import React from "react";
 import "./AboutUs.css";
 
-import adminTeam from '../../data/adminTeam'
+import adminTeam from "../../data/adminTeam";
 import teamMembers from "../../data/teamMembers";
 
 function AboutUs() {
-
   return (
     <div>
       <h1 className="teamTitle">Meet the Team</h1>
@@ -13,12 +12,7 @@ function AboutUs() {
       <div className="teamPictures">
         {adminTeam.map((card, i) => (
           <figure>
-            <img
-              className="teamPhoto"
-              src={card.imgScr}
-              width={200}
-              height={200}
-            />
+            <img className="teamPhoto" src={card.imgScr} />
             <figcaption className="teamInfo">
               <p>
                 {card.name}
@@ -33,14 +27,9 @@ function AboutUs() {
       <div className="membersPictures">
         {teamMembers.map((card, i) => (
           <figure>
-            <img
-              className="memberTeamPhoto"
-              src={card.imgScr}
-              width={200}
-              height={200}
-            />
+            <img className="memberTeamPhoto" src={card.imgScr} />
             <figcaption className="teamInfo">
-              <p>
+              <p className="membersTeamName">
                 {card.name}
                 <br />
                 {card.handle}

@@ -45,7 +45,7 @@ function MailingList() {
           type="email"
           name="email"
           id="email"
-          value={email}
+          value="example@gmail.com"
           placeholder="email"
           onChange={e => setEmail(e.target.value)}
         />

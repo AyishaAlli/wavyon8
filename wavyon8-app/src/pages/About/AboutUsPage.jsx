@@ -5,7 +5,7 @@ import AboutUs from "../../components/About/AboutUs";
 function AboutUsPage() {
   return (
     <>
-    <h1 style={{paddingTop:'150px', textAlign:'center'}}>ABOUT US</h1>
+    <h1 className="title" style={{paddingTop:'150px', textAlign:'center'}}>ABOUT US</h1>
         <Flush />
         <AboutUs/>
 

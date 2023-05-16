@@ -7,14 +7,16 @@
   flex-direction: column;
   align-items: center;
   font-family: "Dosis", sans-serif;
-  margin-top: 200px;
+  margin-top: 150px;
 }
 .signUpText {
   padding: 10px;
+  font-size:30px;
 }
 .mailingListInputContainer {
   border: 2px solid rgb(172, 172, 172);
   padding: 15px;
+  margin-top: 50px;
   width: 500px;
   display: flex;
   justify-content: space-between;

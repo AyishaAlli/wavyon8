@@ -16,7 +16,7 @@ export const Footer = () => {
   return (
     <div className="cc">
       <div className="footerContainer">
-        <h2>WAVYON8.COM</h2>
+        <h2 className="footerTitle">WAVYON8.COM</h2>
         <ul className="footerLinks">
           <li>
             <a>Home</a>
