@@ -1,5 +1,10 @@
+.select-wrapper{
+  overflow: hidden;
+}
+
 .select-wrapper svg {
   color: black;
+  overflow: hidden;
 }
 
 .required-field{

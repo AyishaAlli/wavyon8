@@ -1,15 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import products from "../../data/products";
 import { Link, useParams } from "react-router-dom";
 import Select from "../../components/Select/Select";
+import { CartContext } from "../../context/CartContext";
 
 import "./FeaturedProducts.css";
-import { Button } from "react-bootstrap";
 
 function FeaturedProduct() {
+  const { addOneToCart , items} = useContext(CartContext);
   const { id } = useParams();
   const [product, setProduct] = useState(false);
-  console.log(products);
+
+  const handleAddOneToCart = () => {
+    addOneToCart(product);
+    console.log(product)
+    console.log(items)
+  };
 
   useEffect(() => {
     const fetchProductDetails = async () => {
@@ -60,7 +66,9 @@ function FeaturedProduct() {
 
           <Select name="size" placeholder="E.g Small" label="Size" required />
 
-          <button className="addToCart">ADD TO CART</button>
+          <button className="addToCart" onClick={handleAddOneToCart}>
+            ADD TO CART
+          </button>
         </div>
       </div>
     </div>

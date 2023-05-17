@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "./Nav.css";
 import logo from "../../assets/images/logo_two.png";
 import { NavLink } from "react-router-dom";
-
 import { Modal } from "react-bootstrap";
-
-import ReactDOM from "react-dom";
+import { CartContext } from "../../context/CartContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
@@ -17,6 +15,8 @@ function Nav() {
   const [showColor, handleShowColor] = useState(false); // nav background colour
   const [showNavbar, setShowNavbar] = useState(false); // responsive navbar
   const [showModal, setShowModal] = useState(false); // modal
+
+  const { items, totalItems } = useContext(CartContext);
 
   const handleClose = () => setShow(false);
   const handleOpen = () => setShow(true);
@@ -81,7 +81,8 @@ function Nav() {
             </ul>
           </div>
           <button className="shoppingCartIcon" onClick={handleOpen}>
-            {shoppingCart} 3
+            {shoppingCart}
+            {totalItems}
           </button>
         </div>
       </div>

@@ -1,20 +1,11 @@
 import "./App.css";
-
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
-
-
-
 import CartProvider from "./context/CartContext";
 import ScrollToTop from "./components/ScrollToTop";
-
-
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { useState } from "react";
-
 import RoutesConfig from "./routes/Routes";
-
-
 
 //import RoutesConfig from "./routes/Routes";
 

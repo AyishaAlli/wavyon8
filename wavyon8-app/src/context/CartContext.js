@@ -1,4 +1,4 @@
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext, useEffect } from "react";
 import { products, getProductData } from "../data/products";
 import ProductContext from "./ProductContext";
 
@@ -13,9 +13,17 @@ export const CartContext = createContext({
 });
 
 export function CartProvider({ children }) {
-
   const getProductData = useContext(ProductContext);
   const [cartProducts, setCartProducts] = useState([]);
+
+  const [totalItems, setTotalItems] = useState(0);
+
+  useEffect(() => {
+    // Calculate the total item count whenever the cart items change
+    setTotalItems(
+      cartProducts.reduce((total, item) => total + item.quantity, 0)
+    );
+  }, [cartProducts]);
 
   function getProductQuantity(id) {
     const quantity = cartProducts.find((product) => product.id === id);
@@ -83,6 +91,7 @@ export function CartProvider({ children }) {
     removeOneFromCart,
     deleteFromCart,
     getTotalCost,
+    totalItems,
   };
 
   return (
