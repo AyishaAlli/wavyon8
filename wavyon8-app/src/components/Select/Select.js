@@ -1,51 +1,32 @@
-import React, { useState } from 'react';
-import products from '../../data/products';
-import Select from 'react-select';
+import React from "react";
+import ReactSelect from "react-select";
+import "./Select.css";
 
-
-const Checkbox = ({ children, ...props })=> (
-  <label style={{ marginRight: '1em' }}>
-    <input type="checkbox" {...props} />
-    {children}
-  </label>
-);
-
-
-
-
-
-export default () => {
-  const [isClearable, setIsClearable] = useState(true);
-  const [isSearchable, setIsSearchable] = useState(true);
-  const [isDisabled, setIsDisabled] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isRtl, setIsRtl] = useState(false);
-
+export default function Select({
+  options,
+  name,
+  id,
+  label,
+  placeholder,
+  required,
+  disabled,
+  className
+}) {
   return (
-    <>
-      <Select
-        className="basic-single"
-        classNamePrefix="select"
-        defaultValue={products.colours}
-        isDisabled={isDisabled}
-        isLoading={isLoading}
-        isClearable={isClearable}
-        isRtl={isRtl}
-        isSearchable={isSearchable}
-        name="color"
-        options={products.colours}
+    <div className="select-wrapper">
+      <label className="select-label">
+        {label}
+        {required && <span className="required-field">&#42;</span>}
+      </label>
+      <ReactSelect
+        options={options}
+        name={name}
+        id={id}
+        label={label}
+        disabled={disabled}
+        placeholder={placeholder}
+        className={className}
       />
-
-      <div
-        style={{
-          color: 'hsl(0, 0%, 40%)',
-          display: 'inline-block',
-          fontSize: 12,
-          fontStyle: 'italic',
-          marginTop: '1em',
-        }}
-      >
-      </div>
-    </>
+    </div>
   );
-};
+}

@@ -8,15 +8,14 @@ import './ShoppingPage.css'
 function ShoppingPage() {
   return (
     <div className="shoppingContainer">
-      <h1 className="shopTitle title">ITEMS</h1>
-
-      <Row xs={1} md={3} className="g-4">
+      <h1 className="shopTitle title">RANGE</h1>
+      <div className="productsContainer">
         {products.map((product, id) => (
-          <Col align="center" key={id}>
+          <div align="center" key={id}>
             <ProductsCard product={product} />
-          </Col>
+          </div>
         ))}
-      </Row>
+      </div>
     </div>
   );
 }

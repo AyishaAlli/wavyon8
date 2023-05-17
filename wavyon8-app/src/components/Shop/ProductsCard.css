@@ -1,0 +1,28 @@
+.product-body {
+  border-radius: 15px;
+  width: 300px;
+  height: 350px;
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-body:hover {
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.product-title, .product-price{
+    color: black;
+}
+.product-title{
+    font-size: 25px;
+    font-weight: bold;
+    overflow: hidden;
+}
+.product-price{
+    font-size: 20px;
+    overflow: hidden;
+}

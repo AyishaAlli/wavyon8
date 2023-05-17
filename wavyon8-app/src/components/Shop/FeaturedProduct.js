@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import products from "../../data/products";
 import { Link, useParams } from "react-router-dom";
-import Select from "../Select/Select";
+import Select from "../../components/Select/Select";
 
 import "./FeaturedProducts.css";
+import { Button } from "react-bootstrap";
 
 function FeaturedProduct() {
   const { id } = useParams();
@@ -37,24 +38,29 @@ function FeaturedProduct() {
 
   return (
     <div className="featured-section-container">
-    <Link to={'/shop'}>Back to Products</Link>
+      <Link to={"/shop"}>Back to Products</Link>
       <div className="featured-section-content">
         <div className="featured-left">
           <img
-            className="feature-image"
+            className="featured-image"
             src={product.photo}
             alt={product.title}
           />
         </div>
-        <div className="featured-right">
-          <div className="featured-info">
-            <h2 className="right-title">{product.title}</h2>
-            <p>{product.description}</p>
-            <Select />
-            <Select />
+        <div className="featured-right featured-info">
+          <h2 className="featured-item-title">{product.title}</h2>
+          <p className="featured-item-price">£{product.price}</p>
+          <Select
+            className="logo-colour-select"
+            name="logoColour"
+            placeholder="E.g Pink"
+            label="Logo Colour"
+            required
+          />
 
-            <p>Price: £{product.price}</p>
-          </div>
+          <Select name="size" placeholder="E.g Small" label="Size" required />
+
+          <button className="addToCart">ADD TO CART</button>
         </div>
       </div>
     </div>
