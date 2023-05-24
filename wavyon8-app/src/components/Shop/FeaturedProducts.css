@@ -1,8 +1,9 @@
 .featured-section-container {
-  padding-top: 100px;
+  padding-top: 90px;
 }
+
 .featured-section-content {
-  padding-top: 20px;
+  padding-top: 150px;
   display: flex;
   width: 70%;
   height: 80vh;
@@ -38,11 +39,12 @@
 }
 
 .logo-colour-select {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
+
 .addToCart {
-  margin-top: 105px;
+margin-top: 20px;
   float: right;
   align-self: flex-end;
   background-color: black;
@@ -93,5 +95,27 @@
   }
   .addToCart {
     margin-top: 20px;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .featured-section-content {
+    padding-top: 10px;
+
+  }
+
+  .featured-item-price {
+    margin-bottom: 150px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .featured-section-content {
+    padding-top: 0px;
+
+  }
+
+  .featured-item-price {
+    margin-bottom: 0px;
   }
 }

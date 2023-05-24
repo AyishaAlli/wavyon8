@@ -7,14 +7,14 @@ import { CartContext } from "../../context/CartContext";
 import "./FeaturedProducts.css";
 
 function FeaturedProduct() {
-  const { addOneToCart , items} = useContext(CartContext);
+  const { addOneToCart, items } = useContext(CartContext);
   const { id } = useParams();
   const [product, setProduct] = useState(false);
 
   const handleAddOneToCart = () => {
     addOneToCart(product);
-    console.log(product)
-    console.log(items)
+    console.log(product);
+    console.log(items);
   };
 
   useEffect(() => {
@@ -44,7 +44,7 @@ function FeaturedProduct() {
 
   return (
     <div className="featured-section-container">
-      <Link to={"/shop"}>Back to Products</Link>
+      <Link to={"/shop"} className='backToProductsButton'>Back to Products</Link>
       <div className="featured-section-content">
         <div className="featured-left">
           <img
@@ -56,15 +56,16 @@ function FeaturedProduct() {
         <div className="featured-right featured-info">
           <h2 className="featured-item-title">{product.title}</h2>
           <p className="featured-item-price">£{product.price}</p>
-          <Select
-            className="logo-colour-select"
-            name="logoColour"
-            placeholder="E.g Pink"
-            label="Logo Colour"
-            required
-          />
+          <div className="featured-selects">
+            <Select
+              className="logo-colour-select"
+              name="logoColour"
+              placeholder="E.g Pink"
+              label="Logo Colour"
+              required
+            />
 
-          <Select name="size" placeholder="E.g Small" label="Size" required />
+            <Select name="size" placeholder="E.g Small" label="Size" required />          </div>
 
           <button className="addToCart" onClick={handleAddOneToCart}>
             ADD TO CART
