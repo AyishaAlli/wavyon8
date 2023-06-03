@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const dbConnect = require("./db/dbConnect");
-const Email = require("./models/emailModel");
+const emailRoutes = require("./routes/emailRoutes");
 
 const app = express();
 const port = 8000;
@@ -39,25 +39,9 @@ app.listen(port, () => {
   console.log(`app listening on port ${port}`);
 });
 
-app.post("/submit-email", (request, response) => {
-  const email = new Email({
-    email: request.body.email,
-  });
-  email
-    .save()
-    .then((result) => {
-      response.status(201).send({
-        message: "Email Created Successfully",
-        result,
-      });
-    })
-    // catch error if the new email wasn't added successfully to the database
-    .catch((error) => {
-      response.status(500).send({
-        message: "Error creating email",
-        error,
-      });
-    });
-});
+// Emails
+app.use("/submit-email", emailRoutes);
+
+//Clothing items
 
 module.exports = app;
